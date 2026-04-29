@@ -21,22 +21,22 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        diode-direction = "col2row"; // 回路図のダイオードの向きに合わせました
+        diode-direction = "row2col"; // 回路図の向き。もしダメなら col2row に変更
 
         col-gpios
-            = <&gpio0 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col0 (P0.05)
-            , <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col1 (P0.30)
-            , <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col2 (P0.31)
-            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col3 (P0.29)
-            , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col4 (P0.28)
-            , <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col5 (P0.03)
+            = <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col0: PA8_A4_D4
+            , <&gpio0 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col1: PA9_A5_D5
+            , <&gpio0 25 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col2: PB08_A6_D6
+            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col3: PA5_A9_D9
+            , <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col4: PB09_A7_D7
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Col5: NFC2 (P0.10)
             ;
 
         row-gpios
-            = <&gpio0 2  GPIO_ACTIVE_HIGH> // Row0 (P0.02)
-            , <&gpio0 4  GPIO_ACTIVE_HIGH> // Row1 (P0.04)
-            , <&gpio0 10 GPIO_ACTIVE_HIGH> // Row2 (P0.10)
-            , <&gpio0 11 GPIO_ACTIVE_HIGH> // Row3 (P0.11)
+            = <&gpio0 2  GPIO_ACTIVE_HIGH> // Row0: PA02_A0_D0
+            , <&gpio0 3  GPIO_ACTIVE_HIGH> // Row1: PA4_A1_D1
+            , <&gpio0 28 GPIO_ACTIVE_HIGH> // Row2: PA10_A2_D2
+            , <&gpio0 29 GPIO_ACTIVE_HIGH> // Row3: PA11_A3_D3
             ;
     };
 };
