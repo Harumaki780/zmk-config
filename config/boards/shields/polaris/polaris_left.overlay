@@ -48,3 +48,16 @@
 &uicr {
     nfct-pins-as-gpios;
 };
+
+&left_encoder {
+    status = "okay";
+};
+
+/ {
+    chosen {
+        zmk,battery = &vbatt;
+    };
+
+    // 左手をセントラル（マスター）にする設定
+    zmk,matrix_transform = &default_transform;
+};

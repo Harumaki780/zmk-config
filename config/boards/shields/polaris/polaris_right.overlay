@@ -48,3 +48,14 @@
 &uicr {
     nfct-pins-as-gpios;
 };
+
+/ {
+    // 右手をペリフェラル（スレーブ）にする設定
+    chosen {
+        zmk,matrix_transform = &default_transform;
+    };
+};
+
+&default_transform {
+    col-offset = <6>; // 右手は6列目からスタート
+};
