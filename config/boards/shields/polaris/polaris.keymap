@@ -4,12 +4,76 @@
 / {
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
-                &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y
-                &kp A  &kp S  &kp D  &kp F  &kp G  &kp H
-                &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+                /*
+                 * ==========================================
+                 * LEFT
+                 * ==========================================
+                 */
+
+                /* Row 0 */
+                &kp Q
+                &kp W
+                &kp E
+                &kp R
+                &kp T
+
+                /* RIGHT Row 0 */
+                &kp Y
+                &kp U
+                &kp I
+                &kp O
+                &kp P
+
+
+                /* LEFT Row 1 */
+                &kp A
+                &kp S
+                &kp D
+                &kp F
+                &kp G
+                &kp H
+
+                /* RIGHT Row 1 */
+                &kp H
+                &kp J
+                &kp K
+                &kp L
+                &kp SEMI
+                &kp COLON
+
+
+                /* LEFT Row 2 */
+                &kp Z
+                &kp X
+                &kp C
+                &kp V
+                &kp B
+                &kp N
+
+                /* RIGHT Row 2 */
+                &kp N
+                &kp M
+                &kp COMMA
+                &kp DOT
+                &kp SLASH
+                &kp BSLH
+
+
+                /* LEFT Row 3 */
+                &kp LCTRL
+                &kp LSHIFT
+                &kp LALT
+                &kp N1
+                &kp ENTER
+
+                /* RIGHT Row 3 */
+                &kp BSPC
+                &kp ENTER
+                &kp LEFT
+                &kp RIGHT
             >;
         };
     };
