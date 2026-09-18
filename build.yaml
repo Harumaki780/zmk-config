@@ -1,4 +1,8 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: tester_xiao
+    shield: polaris_left
+  - board: seeeduino_xiao_ble
+    shield: polaris_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
